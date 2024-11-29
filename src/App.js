@@ -5,7 +5,11 @@ const Div = styled.div`
 `;
 
 function App() {
-  return <Div>asdf</Div>;
+  return (
+    <Div>
+      <i className="fa fa-camera-retro"></i> asdf
+    </Div>
+  );
 }
 
 export default App;
