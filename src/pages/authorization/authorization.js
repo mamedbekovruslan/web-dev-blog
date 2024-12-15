@@ -1,9 +1,11 @@
-import { set, useForm } from 'react-hook-form';
+import { useForm } from 'react-hook-form';
 import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { server } from '../../bff';
 import { useState } from 'react';
+import { Button, Input } from '../../components';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const authFormSchema = yup.object().shape({
   login: yup
@@ -22,6 +24,20 @@ const authFormSchema = yup.object().shape({
     .min(6, 'Неверный заполнен пароль. Минимум 6 символа')
     .max(30, 'Неверный заполнен пароль. Максимум 30 символов'),
 });
+
+const StyledLink = styled(Link)`
+  text-align: center;
+  text-decoration: underline;
+  margin: 20px 0;
+  font-size: 18px;
+`;
+
+const ErrorMessage = styled.div`
+  margin: 10px 0 0;
+  padding: 10px;
+  font-size: 10px;
+  background-color: #fcadad;
+`;
 
 export const AuthorizationContainer = ({ className }) => {
   const {
@@ -53,12 +69,13 @@ export const AuthorizationContainer = ({ className }) => {
     <div className={className}>
       <h2>Авторизация</h2>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <input type="text" placeholder="Логин..." {...register('login')} />
-        <input type="password" placeholder="Пароль..." {...register('password')} />
-        <button type="submit" disabled={!!formError}>
-          Войти
-        </button>
-        {errorMessage && <div>{errorMessage}</div>}
+        <Input type="text" placeholder="Логин..." {...register('login')} />
+        <Input type="password" placeholder="Пароль..." {...register('password')} />
+        <Button type="submit" disabled={!!formError}>
+          Авторизация
+        </Button>
+        {errorMessage && <ErrorMessage>{errorMessage}</ErrorMessage>}
+        <StyledLink to="/register">Регистрация</StyledLink>
       </form>
     </div>
   );
@@ -72,5 +89,6 @@ export const Authorization = styled(AuthorizationContainer)`
   & > form {
     display: flex;
     flex-direction: column;
+    width: 260px;
   }
 `;

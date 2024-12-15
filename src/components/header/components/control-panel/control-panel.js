@@ -1,4 +1,4 @@
-import { Icon } from '../../../../components';
+import { Button, Icon } from '../../../../components';
 import styled from 'styled-components';
 import { Link, useNavigate } from 'react-router-dom';
 
@@ -18,7 +18,7 @@ const StyledLink = styled(Link)`
   background-color: #eee;
 `;
 
-const StyledButton = styled.div`
+const StyledIcon = styled.div`
   &:hover {
     cursor: pointer;
   }
@@ -30,12 +30,14 @@ const ControlPanelContainer = ({ className }) => {
   return (
     <div className={{ className }}>
       <RightAligned>
-        <StyledLink to="/login">Войти</StyledLink>
+        <Button>
+          <Link to="/login">Войти</Link>
+        </Button>
       </RightAligned>
       <RightAligned>
-        <StyledButton href="" onClick={() => navigate(-1)}>
+        <StyledIcon href="" onClick={() => navigate(-1)}>
           <Icon id="fa-backward" margin="10px 0 0 0" />
-        </StyledButton>
+        </StyledIcon>
         <Link to="/post">
           <Icon id="fa-file-text-o" margin="10px 0 0 16px" />
         </Link>
