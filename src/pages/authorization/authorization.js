@@ -67,7 +67,7 @@ export const AuthorizationContainer = ({ className }) => {
 
   return (
     <div className={className}>
-      <h2>Авторизация</h2>
+      <H2>Авторизация</H2>
       <form onSubmit={handleSubmit(onSubmit)}>
         <Input
           type="text"
