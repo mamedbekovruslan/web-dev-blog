@@ -16,26 +16,7 @@ const RightAligned = styled.div`
   align-items: center;
 `;
 
-const StyledLink = styled(Link)`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 18px;
-  width: 100px;
-  height: 32px;
-  border: 1px solid #000;
-  background-color: #eee;
-`;
-
 const StyledIcon = styled.div`
-  &:hover {
-    cursor: pointer;
-  }
-`;
-
-const StyledLogoutIcon = styled.div`
-  margin: 0 0 10px 10px;
-
   &:hover {
     cursor: pointer;
   }
