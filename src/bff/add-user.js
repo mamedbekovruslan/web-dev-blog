@@ -1,13 +1,13 @@
 import { generateDate } from './generate-date';
 
-export const addUser = async (regLogin, regPassword) =>
-  await fetch('http:localhost:3005/users', {
+export const addUser = async (login, password) =>
+  fetch('http://localhost:3005/users', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
-      login: regLogin,
-      regPassword: regPassword,
+      login,
+      password,
       register_at: generateDate(),
       role_id: 2,
     }),
-  });
+  }).then((createdUser) => createdUser.json());
