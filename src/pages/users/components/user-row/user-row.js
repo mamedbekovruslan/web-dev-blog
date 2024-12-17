@@ -1,6 +1,7 @@
 import { Icon } from '../../../../components';
 import { useDispatch } from 'react-redux';
-import { ROLE } from '../../constants';
+import { TableRow } from '../table-row/table-row';
+// import { ROLE } from '../../../../constants';
 import styled from 'styled-components';
 
 const UserRowContainer = ({ className, login, registeredAt, roleId: userRoleId }) => {
