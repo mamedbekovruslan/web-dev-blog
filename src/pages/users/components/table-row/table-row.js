@@ -9,7 +9,9 @@ export const TableRow = styled(TableRowContainer)`
   align-items: center;
 
   & > div {
+    display: flex;
     padding: 0 10px;
+    ${({ border }) => (border ? 'border: 1px solid black' : '')}
   }
 
   & .login-column {

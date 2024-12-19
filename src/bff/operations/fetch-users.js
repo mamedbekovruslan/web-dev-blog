@@ -1,4 +1,4 @@
-import { getRoles, getUser } from '../api';
+import { getUsers } from '../api';
 import { ROLE } from '../constants';
 import { sessions } from '../sessions';
 
@@ -12,7 +12,7 @@ export const fetchUsers = async (userSession) => {
     };
   }
 
-  const users = await getRoles();
+  const users = await getUsers();
 
   return {
     error: null,

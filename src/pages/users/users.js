@@ -34,6 +34,7 @@ const UsersContainer = ({ className }) => {
             <div className="registered-at-column">Дата регистрации</div>
             <div className="role-column">Роль</div>
           </TableRow>
+          {console.log(users)}
           {users.map(({ id, login, registeredAt, roleId }) => (
             <UserRow
               key={id}
@@ -55,4 +56,5 @@ export const Users = styled(UsersContainer)`
   flex-direction: column;
   margin: 0 auto;
   width: 570px;
+  font-size: 18px;
 `;
