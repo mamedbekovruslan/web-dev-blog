@@ -7,7 +7,7 @@ export const getUser = async (loginToFind) =>
           id: loadedUser.id,
           login: loadedUser.login,
           password: loadedUser.password,
-          registeredAt: loadedUser.registeredAt,
-          roleId: loadedUser.roleId,
+          registeredAt: loadedUser.registered_at,
+          roleId: loadedUser.role_id,
         },
     );

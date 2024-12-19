@@ -80,8 +80,6 @@ export const AuthorizationContainer = ({ className }) => {
   const formError = errors?.login?.message || errors?.password?.message;
   const errorMessage = formError || serverError;
 
-  console.log('asdf', roleId, ROLE.GUEST);
-
   if (roleId !== ROLE.GUEST) {
     return <Navigate to="/" />;
   }

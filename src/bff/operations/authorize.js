@@ -4,6 +4,8 @@ import { sessions } from '../sessions';
 export const authorize = async (authLogin, authPassword) => {
   const user = await getUser(authLogin);
 
+  console.log(user);
+
   if (!user) {
     return {
       error: 'Такой пользователь не найден',

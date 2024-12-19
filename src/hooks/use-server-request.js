@@ -3,7 +3,7 @@ import { selectUserSession } from '../selectors';
 import { server } from '../bff';
 import { useCallback } from 'react';
 
-export const useServerRequest = (operation, ...params) => {
+export const useServerRequest = () => {
   const session = useSelector(selectUserSession);
 
   return useCallback(

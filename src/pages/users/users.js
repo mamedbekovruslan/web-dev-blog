@@ -18,20 +18,10 @@ const UsersContainer = ({ className }) => {
           return;
         }
 
-        setUsers(usersRes);
-        setRoles(rolesRes);
+        setUsers(usersRes.res);
+        setRoles(rolesRes.res);
       },
     );
-
-    requestServer('fetchRoles').then(({ rolesError, res }) => {
-      if (rolesError) {
-        return;
-      }
-
-      setRoles(res);
-    });
-
-    requestServer('fetchUsers');
   }, [requestServer]);
 
   return (
