@@ -3,18 +3,33 @@ import { useDispatch } from 'react-redux';
 // import { ROLE } from '../../../../constants';
 import styled from 'styled-components';
 import { TableRow } from '../table-row/table-row';
+import { useState } from 'react';
+import { useServerRequest } from '../../../../hooks';
 
 const UserRowContainer = ({
   className,
+  id,
   login,
   registeredAt,
   roles,
   roleId: userRoleId,
+  onUserRemove,
 }) => {
-  const dispatch = useDispatch();
+  const [initialRoleId, setInitialRoleId] = useState(userRoleId);
+  const [selectedRoleId, setSelectedroleId] = useState(userRoleId);
+  const requestServer = useServerRequest();
 
-  const onRoleChange = () => {};
-  console.log(login);
+  const onRoleChange = ({ target }) => {
+    setSelectedroleId(Number(target.value));
+  };
+
+  const onRoleSave = (userId, newUserRoleId) => {
+    requestServer('updateUserRole', userId, newUserRoleId).then(() => {
+      setInitialRoleId(newUserRoleId);
+    });
+  };
+
+  const isSaveButtonDisabled = selectedRoleId === initialRoleId;
 
   return (
     <div className={className}>
@@ -22,7 +37,7 @@ const UserRowContainer = ({
         <div className="login-column">{login}</div>
         <div className="registered-at-column">{registeredAt}</div>
         <div className="role-column">
-          <select value={userRoleId} onChange={onRoleChange}>
+          <select value={selectedRoleId} onChange={onRoleChange}>
             {roles.map(({ id: roleId, name: roleName }) => (
               <option key={roleId} value={roleId}>
                 {roleName}
@@ -31,9 +46,9 @@ const UserRowContainer = ({
           </select>
           <Icon
             id="fa-floppy-o"
-            marign="0 0 0 10px"
-            padding="0 0 0 10px"
-            onClick={() => dispatch(/* TODO */)}
+            margin="0 0 0 10px"
+            disabled={isSaveButtonDisabled}
+            onClick={() => onRoleSave(id, selectedRoleId)}
           />
         </div>
       </TableRow>
@@ -41,7 +56,7 @@ const UserRowContainer = ({
         id="fa-trash-o"
         marign="0 0 0 10px"
         padding="0 0 0 10px"
-        onClick={() => dispatch(/* TODO */)}
+        onClick={onUserRemove}
       />
     </div>
   );
@@ -50,4 +65,9 @@ const UserRowContainer = ({
 export const UserRow = styled(UserRowContainer)`
   display: flex;
   margin-top: 10px;
+
+  & > select {
+    padding: 0 5px;
+    font-size: 16px;
+  }
 `;
