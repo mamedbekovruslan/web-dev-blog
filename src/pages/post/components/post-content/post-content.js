@@ -54,4 +54,8 @@ export const PostContent = styled(PostContentContainer)`
   & .buttons {
     display: flex;
   }
+
+  & .post-text {
+    font-size: 18px;
+  }
 `;

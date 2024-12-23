@@ -20,7 +20,7 @@ const PostContainer = ({ className }) => {
   return (
     <div className={className}>
       <PostContent post={post} />
-      <Comments comments={post} />
+      <Comments comments={post.comments} />
     </div>
   );
 };
