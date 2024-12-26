@@ -65,14 +65,13 @@ export const RegistrationContainer = ({ className }) => {
       }
 
       dispatch(setUser(res));
+      sessionStorage.setItem('userData', JSON.stringify(res));
     });
   };
 
   const formError =
     errors?.login?.message || errors?.password?.message || errors?.passcheck?.message;
   const errorMessage = formError || serverError;
-
-  console.log('asdf', roleId, ROLE.GUEST);
 
   if (roleId !== ROLE.GUEST) {
     return <Navigate to="/" />;

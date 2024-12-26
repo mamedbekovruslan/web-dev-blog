@@ -63,5 +63,62 @@
       "published_at": "2024-11-26"
     }
   ],
-  "comments": []
+  "comments": [
+    {
+      "id": "7d65",
+      "author_id": "001",
+      "post_id": "001",
+      "register_at": "2035-03-09 21:04",
+      "content": "Мой первый комментарий"
+    },
+    {
+      "id": "ce51",
+      "author_id": "001",
+      "post_id": "001",
+      "register_at": "2043-02-22 17:59",
+      "content": "Somehting in the way"
+    },
+    {
+      "id": "9014",
+      "author_id": "001",
+      "post_id": "001",
+      "register_at": "2038-07-16 17:56",
+      "content": "asdfasdf"
+    }
+  ],
+  "sessions": [
+    {
+      "id": "4b10",
+      "hash": "0.29035598976757936995340969588141888380050659179688",
+      "user": {
+        "id": "001",
+        "login": "ruslan",
+        "password": "qwerty1234",
+        "registeredAt": "2024-10-01",
+        "roleId": 0
+      }
+    },
+    {
+      "id": "ac5d",
+      "hash": "0.31225358871130781679426036134827882051467895507813",
+      "user": {
+        "id": "001",
+        "login": "ruslan",
+        "password": "qwerty1234",
+        "registeredAt": "2024-10-01",
+        "roleId": 0
+      }
+    },
+    {
+      "id": "4280",
+      "hash": "0.48516930278358549877282257511978968977928161621094",
+      "user": {
+        "id": "001",
+        "login": "ruslan",
+        "password": "qwerty1234",
+        "registeredAt": "2024-10-01",
+        "roleId": 0
+      }
+    }
+  ]
 }

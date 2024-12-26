@@ -2,10 +2,12 @@ import { addComment, getComments, getPost } from '../api';
 import { ROLE } from '../constants';
 import { sessions } from '../sessions';
 
-export const addPostComment = async (userSession, userId, postId, content) => {
+export const addPostComment = async (hash, userId, postId, content) => {
   const accessRoles = [ROLE.ADMIN, ROLE.MODERATOR, ROLE.READER];
 
-  if (!sessions.access(userSession, accessRoles)) {
+  const access = await sessions.access(hash, accessRoles);
+
+  if (!access) {
     return {
       error: 'Доступ запрещен',
       res: null,
