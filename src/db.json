@@ -65,25 +65,25 @@
   ],
   "comments": [
     {
-      "id": "7d65",
+      "id": "5577",
       "author_id": "001",
       "post_id": "001",
-      "register_at": "2035-03-09 21:04",
-      "content": "Мой первый комментарий"
+      "register_at": "2035-08-28 07:56",
+      "content": "Test1"
     },
     {
-      "id": "ce51",
+      "id": "11fb",
       "author_id": "001",
       "post_id": "001",
-      "register_at": "2043-02-22 17:59",
-      "content": "Somehting in the way"
+      "register_at": "2043-12-03 01:33",
+      "content": "test2"
     },
     {
-      "id": "9014",
+      "id": "d807",
       "author_id": "001",
       "post_id": "001",
-      "register_at": "2038-07-16 17:56",
-      "content": "asdfasdf"
+      "register_at": "2054-12-21 18:31",
+      "content": "q24323"
     }
   ],
   "sessions": [
@@ -112,6 +112,17 @@
     {
       "id": "4280",
       "hash": "0.48516930278358549877282257511978968977928161621094",
+      "user": {
+        "id": "001",
+        "login": "ruslan",
+        "password": "qwerty1234",
+        "registeredAt": "2024-10-01",
+        "roleId": 0
+      }
+    },
+    {
+      "id": "ecde",
+      "hash": "0.05990259653395546557419493183260783553123474121094",
       "user": {
         "id": "001",
         "login": "ruslan",
