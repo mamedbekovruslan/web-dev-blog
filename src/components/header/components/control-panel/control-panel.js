@@ -54,7 +54,7 @@ const ControlPanelContainer = ({ className }) => {
           <Icon id="fa-file-text-o" margin="10px 0 0 16px" />
         </Link>
         <Link to="/users">
-          <Icon id="fa-users" margin="10px 0 0 17px" />
+          <Icon id="fa-users" margin="10px 0 0 16px" />
         </Link>
       </RightAligned>
     </div>
