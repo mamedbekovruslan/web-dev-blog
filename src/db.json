@@ -349,6 +349,17 @@
         "registeredAt": "2024-10-01",
         "roleId": 0
       }
+    },
+    {
+      "hash": "0.70488996667729875156283014803193509578704833984375",
+      "user": {
+        "id": "001",
+        "login": "ruslan",
+        "password": "qwerty1234",
+        "registeredAt": "2024-10-01",
+        "roleId": 0
+      },
+      "id": "OHD2kOA"
     }
   ]
 }
