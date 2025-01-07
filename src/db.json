@@ -360,6 +360,17 @@
         "roleId": 0
       },
       "id": "OHD2kOA"
+    },
+    {
+      "hash": "0.33843768669231288903631593711907044053077697753906",
+      "user": {
+        "id": "001",
+        "login": "ruslan",
+        "password": "qwerty1234",
+        "registeredAt": "2024-10-01",
+        "roleId": 0
+      },
+      "id": "qbhrgkS"
     }
   ]
 }
