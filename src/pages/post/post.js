@@ -4,7 +4,7 @@ import { useMatch, useParams } from 'react-router-dom';
 import styled from 'styled-components';
 import { useServerRequest } from '../../hooks';
 import { loadPostAsync, RESET_POST_DATA } from '../../actions';
-import { selectPost } from '../../selectors';
+import { selectPost, selectUserRole } from '../../selectors';
 import { useEffect, useLayoutEffect, useState } from 'react';
 import { initialPostState } from '../../reducers/post-reducer';
 import { Error, PrivateContent } from '../../components';
